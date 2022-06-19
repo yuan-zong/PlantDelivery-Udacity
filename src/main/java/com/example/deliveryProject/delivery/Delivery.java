@@ -24,7 +24,7 @@ public class Delivery {
 
     //make sure to specify mappedBy. Lazy fetch optional,
     //  but often a good idea for collection attributes
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "delivery", cascade = CascadeType.REMOVE)
+    @OneToMany(fetch = FetchType.EAGER, mappedBy = "delivery", cascade = CascadeType.REMOVE)
     private List<Plant> plants;
 
     public Long getId() {

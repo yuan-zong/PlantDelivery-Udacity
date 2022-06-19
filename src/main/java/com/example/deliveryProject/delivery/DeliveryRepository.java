@@ -55,6 +55,8 @@ public class DeliveryRepository {
                                 root.get("delivery").get("name"),
                                 cb.sum(root.get("price"))))
                 .where(cb.equal(root.get("delivery").get("id"), deliveryId));
+//        System.out.println(cb.toString());
+        Delivery d = find(deliveryId);
         return entityManager.createQuery(query).getSingleResult();
     }
 }

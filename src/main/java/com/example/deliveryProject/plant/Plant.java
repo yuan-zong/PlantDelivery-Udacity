@@ -7,6 +7,7 @@ import javax.persistence.*;
 import java.math.BigDecimal;
 
 @Entity
+//@Table(name = "plant")
 @Inheritance(strategy = InheritanceType.JOINED)
 public class Plant {
     @Id
